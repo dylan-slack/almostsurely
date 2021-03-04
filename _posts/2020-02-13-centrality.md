@@ -2,7 +2,7 @@
 layout:     post
 title:      Centrality in Graph Theory
 date:       2021-03-1 12:31:19
-summary:    Short discussioon on centrality in graph theory; how can we measure the importance of vertices in graphs? 
+summary:    Short discussion on centrality in graph theory; how can we measure the importance of vertices in graphs? 
 categories: Concepts
 ---
 
