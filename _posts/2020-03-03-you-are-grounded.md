@@ -22,7 +22,7 @@ The paper considers 5 experiments.  The experiments assess various ways large la
 
 ### Last Name Prediction
 
-The authors demonstrate language models ground names to well-known named entities. They assess next word probability of last name given first name, $$P(\textrm{Last Name} \| \textrm{First Name})$$, of various names from both media and history, for different prompts. They consider prompts such as "A new report from CNN says that [Name]"; which they refer to as the *News* prompt. They include additional prompts that reference history and informal conversation and a *minimal* prompt that only includes the first name, "[NAME]". 
+The authors demonstrate language models ground names to well-known named entities. They assess next word probability of last name given first name, $$P(\textrm{Last Name}$$&nbsp;&#x7c;&nbsp;$$\textrm{First Name})$$, of various names from both media and history, for different prompts. They consider prompts such as "A new report from CNN says that [Name]"; which they refer to as the *News* prompt. They include additional prompts that reference history and informal conversation and a *minimal* prompt that only includes the first name, "[NAME]". 
 
 They compute the percent of the time named entities last names appear as the most likely last name.  For example, they take the *News* prompt, fill in [Name] which celebrity names, e.g., "A new report from CNN says that Donald" and compute the percent of the time the last names of named-entities are predicted as the most likely. The results are given in Table 2. 
 
