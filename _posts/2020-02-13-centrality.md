@@ -26,9 +26,9 @@ Continuing with the example from the introduction, the person who "holds the gro
 
 ### Betweeness Centrality
 
-A potential issue with Closeness Centrality is that we might rank a node that is close to many vertices but only through a single node (or few vertices) as having high centrality.  For example, if I'm connected to many people in a group, but only through one friend.  In some sense, I'm less critical to the network, though I'm closely connected to many people.
+A potential issue with Closeness Centrality is that it will assign high centrality to vertices that are close to other vertices but only through a single vertex. Let's say I'm connected to many people in a group but only through one friend.  In some sense, I'm less critical to the network, though I'm closely connected to many people.
 
-We can capture this notion using *betweeness centrality*.  Let's consider all pairs of vertices in the graph $$u,w$$.  If the shortest path between all pairs of vertices goes through $$v$$ often, the vertex $$v$$ is probably more important.  We express between centrality as follows,
+We can capture this notion using *betweeness centrality*.  Let's consider all pairs of vertices in the graph, $$u,w$$.  If the shortest path between all pairs of vertices goes through $$v$$ often, the vertex $$v$$ is more important.  We express between centrality as follows,
 
 <center> $$\textrm{centrality}(v) = \sum_{u,w \neq v} \frac{\textrm{Number shortest paths from }u\textrm{ to }w \textrm{ through }v}{\textrm{Number shortest paths from } u \textrm{ to } w }$$</center> 
 
