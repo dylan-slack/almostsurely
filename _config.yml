@@ -3,7 +3,7 @@ title:       Slackin' Off
 email:       dslack@uci.edu
 author:      Dylan Slack
 description: "A blog containing Dylan Slack's miscellaneous ideas, projects, and notes."
-baseurl:     "/"
+baseurl:     ""
 url:         "https://almostsurely.blog"
 date_format: "%b %-d, %Y"
 header_pages:
@@ -37,7 +37,7 @@ fb_page_id:
 
 # Disqus post comments
 # (leave blank to disable Disqus)
-disqus_shortname:
+disqus_shortname: slackin-off-blog
 
 # Facebook Comments plugin
 # (leave blank to disable Facebook Comments, otherwise set it to true)
