@@ -61,5 +61,12 @@ For example, the prompt "[NAME1] has been arguing for shorter prison sentences f
 
 ## Morals of the Story
 
+### Conclusions
+
  These results indicate that language models include unintended biases associated with certain names, resulting in negative consequences in deployment.  We'd expect language models to be fairly invariant to name choices.  Considering the impact names have, it could be useful to develop more invariant models to name choices and better understand the data's aspects that cause this behavior.
 
+### Thoughts
+
+This paper is a nice analysis of a subtle problem with language models. It’s not so surprising that language models have issues with names. Considering they’re trained on news data, which heavily favors certain names in particular contexts, it makes sense this is the case. The experiments demonstrating how this issue plays out are beneficial, however. I particularly liked the Given Name Recovery experiments. These results clearly show that language models tend to generate very different text when prompted with different names, indicating different biases associated with various names.
+
+It would have been interesting to see a more specific connection between the pre-trained model’s behaviors versus the fine-tuned model. We know both the fine-tuned models are sensitive to the names being used from this analysis, but how much of this comes from the pre-trained model versus the fine-tuning data? This question is a bit tricky because the model changes during fine-tuning. One preliminary idea to disentangle the fine-tuning data’s effects could be to remove any mention of names in the tuning data, fine-tune, and see if the same biases emerge.
