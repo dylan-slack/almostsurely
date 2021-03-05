@@ -12,7 +12,7 @@ This [paper](https://www.aclweb.org/anthology/2020.emnlp-main.556/) was publishe
 
 ## Motivation
 
-Considering that language models see lots of text from the web, certain names may be associated with particular entities more often.  Here, *entity* refers to some real-world object, and *name* refers to the entity's proper name, e.g., Donald Trump, the former president is one such entity.  For example, the name Donald is frequently mentioned in news articles, followed by the name Trump.  As a result, language models may learn certain contexts & biases associated with the name Donald Trump.
+Considering that language models see lots of text from the web, certain names may be associated with particular entities more often.  Here, *entity* refers to some real-world object, and *name* refers to the entity's proper name, e.g., Donald Trump, the former president is one such entity.  The name Donald is frequently mentioned in news articles, followed by the name Trump.  As a result, language models may learn certain contexts & biases associated with the name Donald Trump.
 
 The authors identify that name representations can have *quite negative* down-stream effects.  Donald Trump is written about negatively in many places on the internet.  Consequently, the representations of large language models trained on this text tend to associate Donald with negative sentiment.  They show these representations negatively affect downstream tasks.
 
