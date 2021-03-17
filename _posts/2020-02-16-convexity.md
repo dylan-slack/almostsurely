@@ -89,31 +89,34 @@ If $$f : \mathbb{R}^n \rightarrow \mathbb{R}$$ is differentiable, then $$f$$ is 
 If $$f : \mathbb{R}^n \rightarrow \mathbb{R}$$ is twice differentiable, then $$f$$ is convex $$\iff$$ the domain of $$f$$ is convex and its Hessian is positive semidefinite.
 
 
-<!-- {% highlight python lineanchors %}
-import matplotlib.pyplot as plt
-import numpy as np 
+## Code
 
-def interp(x,y):
-    to_int = np.linspace(0,1,100).reshape(100,1)
-    return to_int.dot(x) + (1 - to_int).dot(y)
+Code for the convexity plots.
 
-with plt.xkcd():
+{% highlight python lineanchors %}
+fig = plt.figure()
+ax = fig.add_axes((0.1, 0.2, 0.8, 0.7))
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
 
-    fig = plt.figure()
-    ax = fig.add_axes((0.1, 0.2, 0.8, 0.7))
-    ax.spines['right'].set_color('none')
-    ax.spines['top'].set_color('none')
+f = lambda x : x ** 3
 
-    ax.set_ylim([0, 7])
-    ax.set_xlim([.5,2.5])
+point = 3
+point2 = -3
 
-    s1, s2 = np.array([[1,1]]), np.array([[2,5]])
-    interps = interp(s1,s2)
+theta = np.linspace(0,1,100)
 
-    ax.plot(interps[:,0], interps[:,1], c='b')
-    ax.scatter([1,2],[1,5],c='r',marker='o', s=100)
+lhs = f(theta * point + (1 - theta) * point2)
+rhd = theta * f(point) + (1-theta) * f(point2)
 
-    ax.set_xlabel('X')
-    ax.set_ylabel('Y')
+ax.plot(theta, lhs, c='b', label='LHS')
+ax.plot(theta, rhd, c='r', label='RHS')
+ax.legend()
+ax.set_xlabel("Theta")
+
+fig.text(
+0.5, 0.02,
+'f = x^3 for x=3 and y=-3.',
+ha='center')
+plt.savefig("convex.png")
 {% endhighlight %}
- -->
